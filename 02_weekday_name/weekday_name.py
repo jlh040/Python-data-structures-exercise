@@ -12,3 +12,20 @@ def weekday_name(day_of_week):
         >>> weekday_name(9)
         >>> weekday_name(0)
     """
+
+    if day_of_week < 1 or day_of_week > 7:
+        return None
+    elif day_of_week == 1:
+        return 'Sunday'
+    elif day_of_week == 2:
+        return 'Monday'
+    elif day_of_week == 3:
+        return 'Tuesday'
+    elif day_of_week == 4:
+        return 'Wednesday'
+    elif day_of_week == 5:
+        return 'Thursday'
+    elif day_of_week == 6:
+        return 'Friday'
+    else:
+        return 'Saturday'
