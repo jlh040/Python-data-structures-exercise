@@ -21,3 +21,19 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+    # remove spaces
+    phrase = phrase.replace(' ', '')
+
+    # turn into lowercase
+    phrase = phrase.lower()
+
+    # turn into list
+    phrase_list = list(phrase)
+
+    # reverse the list
+    phrase_list_rv = phrase_list.copy()
+    phrase_list_rv.reverse()
+
+    # check if it reads the same forwards and backwards
+    return True if phrase_list_rv == phrase_list else False
+    
