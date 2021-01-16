@@ -19,3 +19,19 @@ def partition(lst, fn):
         >>> partition(["hi", None, 6, "bye"], is_string)
         [['hi', 'bye'], [None, 6]]
     """
+    # make the lists
+    l1 = []
+    l2 = []
+    l3 =[]
+
+    #separate the elements
+    for elem in lst:
+        if fn(elem):
+            l1.append(elem)
+        else:
+            l2.append(elem)
+
+    #put the distinct lists into one list
+    l3.append(l1)
+    l3.append(l2)
+    return l3
