@@ -1,5 +1,5 @@
 def calculate(operation, a, b, make_int=False, message='The result is'):
-    """Perform operation on a & b, ()possibly truncating) & returning w/msg.
+    """Perform operation on a & b, (possibly truncating) & returning w/msg.
 
     - operation: 'add', 'subtract', 'multiply', or 'divide'
     - a and b: values to operate on
