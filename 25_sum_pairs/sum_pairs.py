@@ -21,3 +21,22 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
+    # Make a new list, make a reversed copy of nums
+    l1 = []
+    nums_copy = nums.copy()
+    nums_copy.reverse()
+
+    # Loop through the reversed copy of nums and append each pair of sums to l1
+    for i in range(len(nums_copy)-1):
+        for j in range(i+1,len(nums_copy)):
+            l1.append((nums_copy[i], nums_copy[j], nums_copy[i] + nums_copy[j]))
+    
+    # filter out any sums that are not equal to goal
+    goal_list = [tup for tup in l1 if tup[2] == goal]
+
+    # if there was no pair that summed to goal, return an empty tuple, otherwise return the numbers that summed to goal
+    if goal_list == []:
+        return ()
+    else:
+        return (goal_list[-1][1], goal_list[-1][0])
+
