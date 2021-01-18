@@ -13,11 +13,11 @@ def two_oldest_ages(ages):
         >>> two_oldest_ages([1, 5, 5, 2])
         (2, 5)
     """
+    # get unique ages
+    age_list = list(set(ages))
 
-    # NOTE: don't worry about an optimized runtime here; it's fine if
-    # you have a runtime worse than O(n)
+    # sort the list
+    age_list.sort()
 
-    # NOTE: you can sort lists with lst.sort(), which works in place (mutates);
-    # you may find it helpful to research the `sorted(iter)` function, which
-    # can take *any* type of list-like-thing, and returns a new, sorted list
-    # from it.
+    # return the oldest ages
+    return (age_list[-2], age_list[-1])
