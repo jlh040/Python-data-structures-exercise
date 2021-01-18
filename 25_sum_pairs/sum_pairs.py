@@ -34,7 +34,8 @@ def sum_pairs(nums, goal):
     # filter out any sums that are not equal to goal
     goal_list = [tup for tup in l1 if tup[2] == goal]
 
-    # if there was no pair that summed to goal, return an empty tuple, otherwise return the numbers that summed to goal
+    # if there was no pair that summed to goal, return an empty tuple, otherwise return the 
+    # first pair of numbers that summed to goal
     if goal_list == []:
         return ()
     else:
